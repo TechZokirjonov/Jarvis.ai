@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JARVIS — Muhammadzohid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">J</div>
+        <div>
+          <h1>JARVIS</h1>
+          <div class="tag">Muhammadzohid — Futuristic Assistant</div>
+        </div>
+      </div>
+      <div class="controls">
+        <input id="apiKey" type="password" placeholder="OpenAI API (ixtiyoriy)" />
+        <button id="deployNote" class="ghost">Deploy: Netlify → jarvisai</button>
+      </div>
+    </header>
+
+    <main class="app">
+      <section class="left">
+        <div class="avatar-wrap" id="avatarWrap">
+          <div class="avatar-face" id="face">
+            <div class="eye left"><div class="pupil" id="pupilL"></div></div>
+            <div class="eye right"><div class="pupil" id="pupilR"></div></div>
+            <div class="mouth"><div class="mouth-inner" id="mouth"></div></div>
+            <div class="status-badge" id="onlineBadge">Online</div>
+          </div>
+        </div>
+
+        <div class="mic-panel">
+          <button id="btnTalk" class="primary">🎤 Gapir (Ctrl+M)</button>
+          <button id="btnStop" class="ghost">⏹ To‘xtat</button>
+          <button id="btnTest" class="ghost">🔊 Test ovoz</button>
+          <div class="viz" id="viz"></div>
+          <div class="small muted">Echo muammosi yo‘q — JARVIS gapirayotganda mikrofon o‘chadi.</div>
+        </div>
+
+        <div class="quick-actions">
+          <button data-act="google">🔎 Google qidir</button>
+          <button data-act="youtube">▶ YouTube qid</button>
+          <button data-act="telegram">✉ Telegram och</button>
+          <button id="weatherBtn">☁️ Ob-havo</button>
+        </div>
+
+      </section>
+
+      <section class="right">
+        <div class="header">
+          <div class="title">Suhbat</div>
+          <div class="status" id="status">Mic: OFF</div>
+        </div>
+
+        <div class="transcript" id="transcript" aria-live="polite"></div>
+
+        <div class="manual">
+          <input id="manualInput" placeholder="Yozma savol — Enter bilan yubor" />
+          <button id="sendBtn" class="primary">Yubor</button>
+        </div>
+
+        <div class="footer-note">
+          <div>Foydalanish: gapir yoki yoz. Agar OpenAI API qo‘ysang (ixtiyoriy) — murakkab savollarga ChatGPT javob beradi.</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
